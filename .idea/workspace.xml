@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13ae96b2-e491-4f01-b6b5-7c5d67eab3cf" name="Changes" comment="Setup">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flu_tweets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flu_tweets.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json-simple-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/DataLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/DataProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/studenttests/BasicTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/ui/CommandLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/util/Utilities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/states.csv" afterDir="false" />
+    <list default="true" id="13ae96b2-e491-4f01-b6b5-7c5d67eab3cf" name="Changes" comment="Basic file structure setup">
+      <change afterPath="$PROJECT_DIR$/junit-platform-console-standalone-1.3.2.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SoloProject_CIT594.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoloProject_CIT594.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/studenttests/BasicTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/studenttests/BasicTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +25,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/edu/upenn/cit594/studenttests/BasicTests.java" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -48,6 +41,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -62,8 +56,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -76,6 +70,18 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="edu.upenn.cit594.Main" />
+      <module name="SoloProject_CIT594" />
+      <option name="PROGRAM_PARAMETERS" value="flu_tweets.json states.csv log.txt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -84,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712341954681</updated>
-      <workItem from="1712341956060" duration="950000" />
+      <workItem from="1712341956060" duration="1938000" />
     </task>
     <task id="LOCAL-00001" summary="Setup">
       <created>1712341972481</created>
@@ -93,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712341972481</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Basic file structure setup">
+      <created>1712342994919</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712342994919</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,7 +124,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup" />
+    <MESSAGE value="Basic file structure setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic file structure setup" />
   </component>
 </project>

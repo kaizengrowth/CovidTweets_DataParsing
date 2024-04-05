@@ -17,7 +17,6 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import edu.upenn.cit594.Main;
 import org.junit.Test;
 
 public class BasicTests {
@@ -112,7 +111,7 @@ public class BasicTests {
 		System.out.println(extractResults(results));
 		print2DStrings(extractLog("trivial_log.log"));
 	}
-	
+
 	@Test
 	public void testThreeThings() throws Exception {
 		File logFile = new File("log.three_things");
@@ -136,6 +135,6 @@ public class BasicTests {
 		Map<String, Integer> resMap = extractResults(results);
 		print2DStrings(extractLog("log.three_things"));
 		assertTrue(resMap.size() == 1);
-		
+
 	}
 }
