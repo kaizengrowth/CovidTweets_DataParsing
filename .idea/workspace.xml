@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13ae96b2-e491-4f01-b6b5-7c5d67eab3cf" name="Changes" comment="Added modules (junit, json parser)&#10;Added 3 runtime arguments (flu_tweets.json states.csv log.txt)">
+    <list default="true" id="13ae96b2-e491-4f01-b6b5-7c5d67eab3cf" name="Changes" comment="Add Logger in logging package as globally accessible Singleton pattern">
+      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONTweetReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextTweetReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TweetReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/util/Tweet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoloProject_CIT594.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoloProject_CIT594.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/util/Utilities.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +94,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712341954681</updated>
-      <workItem from="1712341956060" duration="2224000" />
+      <workItem from="1712341956060" duration="3419000" />
     </task>
     <task id="LOCAL-00001" summary="Setup">
       <created>1712341972481</created>
@@ -111,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712343986879</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Logger in logging package as globally accessible Singleton pattern">
+      <created>1712344207062</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712344207062</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +146,7 @@
     <MESSAGE value="Setup" />
     <MESSAGE value="Basic file structure setup" />
     <MESSAGE value="Added modules (junit, json parser)&#10;Added 3 runtime arguments (flu_tweets.json states.csv log.txt)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added modules (junit, json parser)&#10;Added 3 runtime arguments (flu_tweets.json states.csv log.txt)" />
+    <MESSAGE value="Add Logger in logging package as globally accessible Singleton pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Logger in logging package as globally accessible Singleton pattern" />
   </component>
 </project>
