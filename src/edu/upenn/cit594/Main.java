@@ -1,4 +1,5 @@
 package edu.upenn.cit594;
+import edu.upenn.cit594.logging.Logger;
 import edu.upenn.cit594.util.Tweet;
 import edu.upenn.cit594.datamanagement.TweetReader;
 import edu.upenn.cit594.datamanagement.JSONTweetReader;
@@ -27,6 +28,11 @@ public class Main {
             return;
         }
 
+        Logger logger = Logger.getInstance();
+
         List<Tweet> tweets = reader.readTweets(tweetsFile);
+        for (Tweet tweet : tweets) {
+            logger.log(tweet.getText());
+        }
     }
 }

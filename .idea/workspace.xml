@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13ae96b2-e491-4f01-b6b5-7c5d67eab3cf" name="Changes" comment="Add TweetReader interface with two implementations (JSON, TSV txt) to datamanagement package. Add Tweet class to utility package.">
+    <list default="true" id="13ae96b2-e491-4f01-b6b5-7c5d67eab3cf" name="Changes" comment="Error handling in Main: expect 3 command line arguments.">
+      <change afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/util/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/util/Tweet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712341954681</updated>
-      <workItem from="1712341956060" duration="3618000" />
+      <workItem from="1712341956060" duration="4623000" />
     </task>
     <task id="LOCAL-00001" summary="Setup">
       <created>1712341972481</created>
@@ -125,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712345398732</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Error handling in Main: expect 3 command line arguments.">
+      <created>1712345606321</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712345606321</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +159,7 @@
     <MESSAGE value="Added modules (junit, json parser)&#10;Added 3 runtime arguments (flu_tweets.json states.csv log.txt)" />
     <MESSAGE value="Add Logger in logging package as globally accessible Singleton pattern" />
     <MESSAGE value="Add TweetReader interface with two implementations (JSON, TSV txt) to datamanagement package. Add Tweet class to utility package." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add TweetReader interface with two implementations (JSON, TSV txt) to datamanagement package. Add Tweet class to utility package." />
+    <MESSAGE value="Error handling in Main: expect 3 command line arguments." />
+    <option name="LAST_COMMIT_MESSAGE" value="Error handling in Main: expect 3 command line arguments." />
   </component>
 </project>

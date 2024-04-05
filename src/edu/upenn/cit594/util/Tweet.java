@@ -5,4 +5,8 @@ public class Tweet {
     private String date;
     private double latitude;
     private double longitude;
+
+    public String getText() {
+        return this.text;
+    }
 }
