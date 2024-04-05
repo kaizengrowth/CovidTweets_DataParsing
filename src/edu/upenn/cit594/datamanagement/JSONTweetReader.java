@@ -18,8 +18,9 @@ public class JSONTweetReader implements TweetReader {
 
             for (Object obj : jsonArray) {
                 JSONObject tweetJson = (JSONObject) obj;
+                String text = (String) tweetJson.get("text");
                 Tweet tweet = new Tweet();
-                // Set tweet properties using tweetJson data
+                tweet.setText(text);
                 tweets.add(tweet);
             }
         } catch (Exception e) {

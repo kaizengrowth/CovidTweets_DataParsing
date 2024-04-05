@@ -13,8 +13,9 @@ public class TextTweetReader implements TweetReader {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split("\t");
+                String text = parts[3]; // just reading text for now, which is the 4th part in the TSV line
                 Tweet tweet = new Tweet();
-                // Set tweet properties using parts data
+                tweet.setText(text);
                 tweets.add(tweet);
             }
         } catch (Exception e) {

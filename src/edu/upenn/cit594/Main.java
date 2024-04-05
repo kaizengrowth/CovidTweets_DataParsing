@@ -9,7 +9,7 @@ import edu.upenn.cit594.datamanagement.TextTweetReader;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static <tweet> void main(String[] args) {
         // Error handling: expect 3 command line arguments
         if (args.length != 3) {
             System.err.println("Usage: java Main <tweets_file> <states_file> <log_file>");
@@ -24,6 +24,7 @@ public class Main {
 
         List<Tweet> tweets = reader.readTweets(tweetsFile);
         processor.processTweets(tweets);
+
     }
 
     private static TweetReader getTweetReader(String filename) {
