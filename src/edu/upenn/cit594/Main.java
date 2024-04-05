@@ -1,5 +1,6 @@
 package edu.upenn.cit594;
 import edu.upenn.cit594.logging.Logger;
+import edu.upenn.cit594.processor.TweetProcessor;
 import edu.upenn.cit594.util.Tweet;
 import edu.upenn.cit594.datamanagement.TweetReader;
 import edu.upenn.cit594.datamanagement.JSONTweetReader;
@@ -16,23 +17,22 @@ public class Main {
         }
 
         String tweetsFile = args[0];
-        TweetReader reader;
 
-        if (tweetsFile.endsWith(".json")) {
-            reader = new JSONTweetReader();
-        } else if (tweetsFile.endsWith(".txt")) {
-            reader = new TextTweetReader();
-        } else {
-            System.err.println("Invalid tweets file format.");
-            System.exit(1);
-            return;
-        }
-
+        TweetReader reader = getTweetReader(tweetsFile);
         Logger logger = Logger.getInstance();
+        TweetProcessor processor = new TweetProcessor(logger);
 
         List<Tweet> tweets = reader.readTweets(tweetsFile);
-        for (Tweet tweet : tweets) {
-            logger.log(tweet.getText());
+        processor.processTweets(tweets);
+    }
+
+    private static TweetReader getTweetReader(String filename) {
+        if (filename.endsWith(".json")) {
+            return new JSONTweetReader();
+        } else if (filename.endsWith(".txt")) {
+            return new TextTweetReader();
+        } else {
+            throw new IllegalArgumentException("Invalid tweets file format.");
         }
     }
 }
