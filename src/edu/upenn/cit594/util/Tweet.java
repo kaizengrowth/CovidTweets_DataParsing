@@ -1,11 +1,15 @@
 package edu.upenn.cit594.util;
 
+/**
+ * Represents a tweet, containing the text of the tweet and its geographic location.
+ */
 public class Tweet {
     private String text;
     private String date;
     private double latitude;
     private double longitude;
 
+    // Getter Methods
     public String getText() {
         return this.text;
     }
@@ -18,6 +22,8 @@ public class Tweet {
         return this.longitude;
     }
 
+
+    // Setter Methods
     public void setText(String text) {
         this.text = text;
     }
@@ -29,5 +35,4 @@ public class Tweet {
     public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
-
 }

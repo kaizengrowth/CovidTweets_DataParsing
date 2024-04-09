@@ -8,7 +8,18 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A TweetReader implementation for reading tweet data from JSON files.
+ */
 public class JSONTweetReader implements TweetReader {
+
+    /**
+     * Reads tweets from a JSON file and constructs a list of Tweet objects.
+     *
+     * @param filename The path to the JSON file containing tweets.
+     * @return A list of Tweet objects.
+     */
+    @Override
     public List<Tweet> readTweets(String filename) {
         List<Tweet> tweets = new ArrayList<>();
         JSONParser parser = new JSONParser();

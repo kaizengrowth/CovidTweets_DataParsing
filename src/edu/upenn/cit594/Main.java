@@ -1,14 +1,13 @@
 package edu.upenn.cit594;
 import edu.upenn.cit594.logging.Logger;
 import edu.upenn.cit594.processor.TweetProcessor;
-import edu.upenn.cit594.processor.StateProcessor;
 import edu.upenn.cit594.datamanagement.TweetReader;
 import edu.upenn.cit594.datamanagement.TweetReaderFactory;
 import edu.upenn.cit594.datamanagement.StateReader;
 import edu.upenn.cit594.util.Tweet;
 import edu.upenn.cit594.util.State;
 import edu.upenn.cit594.util.FileUtils;
-import edu.upenn.cit.594.ui.UserInterface;
+import edu.upenn.cit594.ui.UserInterface;
 
 import java.util.List;
 
@@ -44,21 +43,22 @@ public class Main {
 
         // Validate file existence
         if (!FileUtils.validateFileExistence(tweetsFile) || !FileUtils.validateFileExistence(statesFile)) {
-            System.err.println("Error: One or more specified files do not exist or cannot be opened.");
+            ui.printErrorMessage("Error: One or more specified files do not exist or cannot be opened.");
             System.exit(1);
         }
 
+        Logger logger = null;
+
         try {
             // Initialize logging
-            Logger logger = Logger.getInstance(logFile);
+            logger = Logger.getInstance();
+            logger.configure(logFile); // Configure logger to use specified log file
 
             // Initialize data readers and processors
             TweetReader reader = TweetReaderFactory.getTweetReader(tweetsFile);
             StateReader stateReader = new StateReader(statesFile);
-
             List<Tweet> tweets = reader.readTweets(tweetsFile);
             List<State> states = stateReader.readStates();
-
             TweetProcessor processor = new TweetProcessor(logger, states);
 
             // Process tweets
@@ -66,6 +66,11 @@ public class Main {
         } catch (Exception e) {
             ui.printInitializationError(e.getMessage());
             System.exit(1);
+        } finally {
+            // Ensure logger is closed properly
+            if (logger != null) {
+                logger.close();
+            }
         }
     }
 }

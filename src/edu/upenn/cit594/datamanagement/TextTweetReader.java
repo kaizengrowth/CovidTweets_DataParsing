@@ -5,7 +5,18 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A TweetReader implementation for reading tweet data from text files.
+ */
 public class TextTweetReader implements TweetReader {
+
+    /**
+     * Reads tweets from a text file where each line is a tweet, and constructs a list of Tweet objects.
+     *
+     * @param filename The path to the text file containing tweets.
+     * @return A list of Tweet objects.
+     */
+    @Override
     public List<Tweet> readTweets(String filename) {
         List<Tweet> tweets = new ArrayList<>();
 
