@@ -2,25 +2,26 @@ package edu.upenn.cit594.logging;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Logger {
-    private static Logger instance;
+    private static final Map<String, Logger> instances = new HashMap<>();
     private static PrintWriter printWriter;
-    private static String message;
 
-    private Logger() {
+    private Logger(String logFileName) {
         try {
-            printWriter = new PrintWriter(new FileWriter("log.txt", true), true);
+            printWriter = new PrintWriter(new FileWriter(logFileName, true), true);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static synchronized Logger getInstance() {
-        if (instance == null) {
-            instance = new Logger();
+    public static synchronized Logger getInstance(String logFileName) {
+        if (!instances.containsKey(logFileName)) {
+            instances.put(logFileName, new Logger(logFileName));
         }
-        return instance;
+        return instances.get(logFileName);
     }
 
     public void log(String message) {

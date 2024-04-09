@@ -24,7 +24,7 @@ public class Main {
         String logFile = args[2];
 
         TweetReader reader = getTweetReader(tweetsFile);
-        Logger logger = Logger.getInstance();
+        Logger logger = Logger.getInstance(logFile);
         StateReader stateReader = new StateReader(statesFile);
         List<State> states = stateReader.readStates();
 
