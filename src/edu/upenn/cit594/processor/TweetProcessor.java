@@ -28,7 +28,6 @@ public class TweetProcessor {
             String text = tweet.getText();
             if (isFluTweet(text)) {
                 String closestStateName = stateProcessor.findClosestState(tweet.getLatitude(), tweet.getLongitude());
-                System.out.println("Tweet: " + text + ", State: " + closestStateName);
                 if (!closestStateName.equals("Unknown")) {
                     fluTweetCounts.put(closestStateName, fluTweetCounts.getOrDefault(closestStateName, 0) + 1);
                     logger.log(closestStateName + "\t" + text);
