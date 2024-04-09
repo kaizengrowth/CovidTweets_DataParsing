@@ -15,7 +15,7 @@ public class TweetProcessor {
     private final Logger logger;
     private final StateProcessor stateProcessor;
     private List<State> states;
-    private static final Pattern fluPattern = Pattern.compile("(?i)(?:^|\\W)(#?flu)(?![a-z])");
+    private final Map<String, Integer> fluTweetCounts = new HashMap<>();
 
     public TweetProcessor(Logger logger, List<State> states) {
         this.logger = logger;
@@ -23,12 +23,12 @@ public class TweetProcessor {
     }
 
     public void processTweets(List<Tweet> tweets) {
-        Map<String, Integer> fluTweetCounts = new HashMap<>();
 
         for (Tweet tweet : tweets) {
             String text = tweet.getText();
             if (isFluTweet(text)) {
                 String closestStateName = stateProcessor.findClosestState(tweet.getLatitude(), tweet.getLongitude());
+                System.out.println("Tweet: " + text + ", State: " + closestStateName);
                 if (!closestStateName.equals("Unknown")) {
                     fluTweetCounts.put(closestStateName, fluTweetCounts.getOrDefault(closestStateName, 0) + 1);
                     logger.log(closestStateName + "\t" + text);
@@ -37,10 +37,12 @@ public class TweetProcessor {
         }
         for (Map.Entry<String, Integer> entry : fluTweetCounts.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
+
         }
     }
 
     private boolean isFluTweet(String text) {
+        Pattern fluPattern = Pattern.compile("(?i)(?:^|\\b|\\s|#)flu($|\\b|[^a-zA-Z])");
         Matcher matcher = fluPattern.matcher(text);
         return matcher.find();
     }

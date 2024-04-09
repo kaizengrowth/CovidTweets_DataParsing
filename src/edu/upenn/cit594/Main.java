@@ -21,6 +21,7 @@ public class Main {
 
         String tweetsFile = args[0];
         String statesFile = args[1];
+        String logFile = args[2];
 
         TweetReader reader = getTweetReader(tweetsFile);
         Logger logger = Logger.getInstance();
