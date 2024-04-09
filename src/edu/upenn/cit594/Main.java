@@ -8,6 +8,7 @@ import edu.upenn.cit594.datamanagement.StateReader;
 import edu.upenn.cit594.util.Tweet;
 import edu.upenn.cit594.util.State;
 import edu.upenn.cit594.util.FileUtils;
+import edu.upenn.cit.594.ui.UserInterface;
 
 import java.util.List;
 
@@ -23,9 +24,11 @@ public class Main {
      * @param args Command line arguments: tweets file, states file, and log file.
      */
     public static <tweet> void main(String[] args) {
+        UserInterface ui = new UserInterface();
+
         // Error handling: expect 3 command line arguments
         if (args.length != 3) {
-            System.err.println("Usage: java Main <tweets_file> <states_file> <log_file>");
+            ui.printUsage();
             System.exit(1);
         }
 
@@ -35,7 +38,7 @@ public class Main {
 
         // Check for valid file extensions
         if (!FileUtils.isValidExtension(tweetsFile)) {
-            System.err.println("Error: Tweets file must have a .json or .txt extension.");
+            ui.printErrorMessage("Error: One or more specified files do not exist or cannot be opened.");
             System.exit(1);
         }
 
@@ -61,7 +64,7 @@ public class Main {
             // Process tweets
             processor.processTweets(tweets);
         } catch (Exception e) {
-            System.err.println("Error initializing the application: " + e.getMessage());
+            ui.printInitializationError(e.getMessage());
             System.exit(1);
         }
     }

@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13ae96b2-e491-4f01-b6b5-7c5d67eab3cf" name="Changes" comment="Both basic tests are now passing">
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TweetReaderFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/util/FileUtils.java" afterDir="false" />
+    <list default="true" id="13ae96b2-e491-4f01-b6b5-7c5d67eab3cf" name="Changes" comment="Improved Main and used Factory design method for TweetReader classes">
+      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/ui/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TweetReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TweetReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/ui/CommandLine.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +109,7 @@
       <updated>1712341954681</updated>
       <workItem from="1712341956060" duration="9441000" />
       <workItem from="1712521320741" duration="601000" />
-      <workItem from="1712645477851" duration="12454000" />
+      <workItem from="1712645477851" duration="12921000" />
     </task>
     <task id="LOCAL-00001" summary="Setup">
       <created>1712341972481</created>
@@ -203,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712656454903</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Improved Main and used Factory design method for TweetReader classes">
+      <created>1712657997912</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712657997912</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +241,8 @@
     <MESSAGE value="Now this seems correct, and I'm really not sure what changed." />
     <MESSAGE value="Running tests" />
     <MESSAGE value="Both basic tests are now passing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Both basic tests are now passing" />
+    <MESSAGE value="Improved Main and used Factory design method for TweetReader classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved Main and used Factory design method for TweetReader classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
