@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13ae96b2-e491-4f01-b6b5-7c5d67eab3cf" name="Changes" comment="Add ui/ UserInterface class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONTweetReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONTweetReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/StateReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/StateReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextTweetReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextTweetReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/StateProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/StateProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/TweetProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/TweetProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/util/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/util/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/util/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/util/Tweet.java" afterDir="false" />
-    </list>
+    <list default="true" id="13ae96b2-e491-4f01-b6b5-7c5d67eab3cf" name="Changes" comment="Added Javadocs. Checked for common errors. Completed assignment." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +104,7 @@
       <updated>1712341954681</updated>
       <workItem from="1712341956060" duration="9441000" />
       <workItem from="1712521320741" duration="601000" />
-      <workItem from="1712645477851" duration="15656000" />
+      <workItem from="1712645477851" duration="16120000" />
     </task>
     <task id="LOCAL-00001" summary="Setup">
       <created>1712341972481</created>
@@ -222,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712658467076</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added Javadocs. Checked for common errors. Completed assignment.">
+      <created>1712661631643</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1712661631643</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +252,7 @@
     <MESSAGE value="Both basic tests are now passing" />
     <MESSAGE value="Improved Main and used Factory design method for TweetReader classes" />
     <MESSAGE value="Add ui/ UserInterface class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ui/ UserInterface class" />
+    <MESSAGE value="Added Javadocs. Checked for common errors. Completed assignment." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Javadocs. Checked for common errors. Completed assignment." />
   </component>
 </project>
