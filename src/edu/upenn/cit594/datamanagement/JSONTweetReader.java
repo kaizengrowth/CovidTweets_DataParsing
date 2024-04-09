@@ -19,8 +19,14 @@ public class JSONTweetReader implements TweetReader {
             for (Object obj : jsonArray) {
                 JSONObject tweetJson = (JSONObject) obj;
                 String text = (String) tweetJson.get("text");
+                JSONArray location = (JSONArray) tweetJson.get("location");
+                double latitude = (double) location.get(0);
+                double longitude = (double) location.get(1);
+
                 Tweet tweet = new Tweet();
                 tweet.setText(text);
+                tweet.setLatitude(latitude);
+                tweet.setLongitude(longitude);
                 tweets.add(tweet);
             }
         } catch (Exception e) {

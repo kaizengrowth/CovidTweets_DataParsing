@@ -1,10 +1,13 @@
 package edu.upenn.cit594;
 import edu.upenn.cit594.logging.Logger;
 import edu.upenn.cit594.processor.TweetProcessor;
+import edu.upenn.cit594.processor.StateProcessor;
 import edu.upenn.cit594.util.Tweet;
+import edu.upenn.cit594.util.State;
 import edu.upenn.cit594.datamanagement.TweetReader;
 import edu.upenn.cit594.datamanagement.JSONTweetReader;
 import edu.upenn.cit594.datamanagement.TextTweetReader;
+import edu.upenn.cit594.datamanagement.StateReader;
 
 import java.util.List;
 
@@ -17,10 +20,15 @@ public class Main {
         }
 
         String tweetsFile = args[0];
+        String statesFile = args[1];
 
         TweetReader reader = getTweetReader(tweetsFile);
         Logger logger = Logger.getInstance();
-        TweetProcessor processor = new TweetProcessor(logger);
+        StateReader stateReader = new StateReader(statesFile);
+        List<State> states = stateReader.readStates();
+
+        StateProcessor stateProcessor = new StateProcessor(states);
+        TweetProcessor processor = new TweetProcessor(logger, states);
 
         List<Tweet> tweets = reader.readTweets(tweetsFile);
         processor.processTweets(tweets);

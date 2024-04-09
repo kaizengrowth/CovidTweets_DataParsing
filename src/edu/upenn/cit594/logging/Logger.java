@@ -25,7 +25,6 @@ public class Logger {
 
     public void log(String message) {
         if (message != null && printWriter != null) {
-            System.out.println("Logging message: " + message); // Debug
             printWriter.println(message);
         }
     }
